@@ -44,14 +44,14 @@ int main(){
     double x,y,z;
     double vx,vy,vz;
     cout<<"Podaj pozycje startowa (X,Y,Z): ";
-    cin>>x,y,z;
+    cin>>x>>y>>z;
     cout<<endl<<"Podaj predkosc startowa (X,Y,Z): ";
-    cin>>vx,vy,vz;
+    cin>>vx>>vy>>vz;
     cout<<endl<<"Podaj krok obliczen dt = ";
     double dt = 0.01;
     cin>>dt;
     cout<<endl;
-    plik<<"X,"<<"Y,"<<"Z,"<<"VX,"<<"VY,"<<"VZ,"<<"RX,"<<"RY,"<<"TIME,"<<endl;
+    plik<<"X,"<<"Y,"<<"Z,"<<"VX,"<<"VY,"<<"VZ,"<<"RX,"<<"RY,"<<"TIME"<<endl;
     CanSat TerraCan = {x,y,z, vx,vy,vz, 0.8,0.0045, 0.32}; // pos, vel, Cd, A,  masa
     double V_total, Fd, p; //predkosc wypadkowa, wypadkowy opor powietrza, gestosc powietrza dla aktualnej wysokosci
     const double Fg = -(TerraCan.mass * g); // sila ciezkosci jest stala
